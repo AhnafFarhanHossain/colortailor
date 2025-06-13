@@ -6,7 +6,6 @@ const Navbar = () => {
   const navbarLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "My Palettes", href: "/palettes" },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

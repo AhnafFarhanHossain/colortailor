@@ -3,3 +3,52 @@
 @theme inline {
   --font-sans: "Ubuntu", sans-serif;
 }
+
+/* Custom animations and styles */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Grid background pattern */
+.bg-grid-slate-100 {
+  background-image: radial-gradient(circle, #f1f5f9 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-red-100 {
+  background-image: radial-gradient(circle, #fee2e2 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glassmorphism effect */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Smooth transitions - exclude background properties that might interfere with color display */
+* {
+  transition: color 0.3s ease, border 0.3s ease, transform 0.3s ease,
+    opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Override for color swatches to ensure they display correctly */
+.color-swatch {
+  background-color: var(--swatch-color) !important;
+  transition: transform 0.2s ease !important;
+}
